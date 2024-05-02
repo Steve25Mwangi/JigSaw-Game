@@ -120,6 +120,8 @@ gameScene.setUpPuzzle = function () {
 
         this.unsortedPieces.add(piece);
         piece.isMovable = true;
+
+        piece.setAlpha(1);
     };
 
     // shuffle the positions of each piece horizontally to randomize without repeating
