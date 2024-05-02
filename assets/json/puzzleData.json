@@ -35,7 +35,7 @@
             "gridSizeX": 8,
             "gridSizeY": 6,
             "puzzlePieceFitterSize": 12,
-            "puzzleImage": "https://play-lh.googleusercontent.com/Icj6FDBp9Wto-yRDoBH_8W_AMAlxjlV5NhH_4PTMHuCg-99GP9qb0mcCJQlV7RK33A=w526-h296-rw"
+            "puzzleImage": "https://static5.depositphotos.com/1005091/394/i/600/depositphotos_3947102-stock-illustration-leafy-tree-in-autumn-landscape.jpg"
         },
         {
             "puzzleName": "SeaMonster",
@@ -44,16 +44,16 @@
             "gridSizeX": 3,
             "gridSizeY": 3,
             "puzzlePieceFitterSize": 25,
-            "puzzleImage": "https://play-lh.googleusercontent.com/ELVNNsMJmbma8BMtGY3mcpsOE1wLUX_1YM1K24TXMK9o69dtbnXYrROY3S_o8G7jdQ=w526-h296-rw"
+            "puzzleImage": "https://st.depositphotos.com/1005091/4736/v/600/depositphotos_47366795-stock-illustration-tree-theme-image-8.jpg"
         },
         {
             "puzzleName": "Slayer",
             "puzzleScale": 1,
             "puzzlePieceRange": 50,
-            "gridSizeX": 8,
+            "gridSizeX": 6,
             "gridSizeY": 6,
-            "puzzlePieceFitterSize": 25,
-            "puzzleImage": "https://play-lh.googleusercontent.com/Icj6FDBp9Wto-yRDoBH_8W_AMAlxjlV5NhH_4PTMHuCg-99GP9qb0mcCJQlV7RK33A=w526-h296-rw"
+            "puzzlePieceFitterSize": 16,
+            "puzzleImage": "https://st2.depositphotos.com/1763191/47189/v/600/depositphotos_471899648-stock-illustration-blank-landscape-scene-nature-park.jpg"
         },
         {
             "puzzleName": "Slayer",
@@ -62,25 +62,25 @@
             "gridSizeX": 8,
             "gridSizeY": 6,
             "puzzlePieceFitterSize": 12,
-            "puzzleImage": "https://play-lh.googleusercontent.com/Icj6FDBp9Wto-yRDoBH_8W_AMAlxjlV5NhH_4PTMHuCg-99GP9qb0mcCJQlV7RK33A=w526-h296-rw"
+            "puzzleImage": "https://st2.depositphotos.com/1526816/47764/v/600/depositphotos_477647726-stock-illustration-blank-nature-park-landscape-scene.jpg"
         },
         {
             "puzzleName": "SeaMonster",
             "puzzleScale": 1,
             "puzzlePieceRange": 50,
-            "gridSizeX": 3,
-            "gridSizeY": 3,
+            "gridSizeX": 4,
+            "gridSizeY": 4,
             "puzzlePieceFitterSize": 25,
-            "puzzleImage": "https://play-lh.googleusercontent.com/ELVNNsMJmbma8BMtGY3mcpsOE1wLUX_1YM1K24TXMK9o69dtbnXYrROY3S_o8G7jdQ=w526-h296-rw"
+            "puzzleImage": "https://static4.depositphotos.com/1005091/369/v/600/depositphotos_3690219-stock-illustration-country-landscape-with-barn.jpg"
         },
         {
             "puzzleName": "Slayer",
             "puzzleScale": 1,
             "puzzlePieceRange": 50,
-            "gridSizeX": 8,
+            "gridSizeX": 6,
             "gridSizeY": 6,
-            "puzzlePieceFitterSize": 25,
-            "puzzleImage": "https://play-lh.googleusercontent.com/Icj6FDBp9Wto-yRDoBH_8W_AMAlxjlV5NhH_4PTMHuCg-99GP9qb0mcCJQlV7RK33A=w526-h296-rw"
+            "puzzlePieceFitterSize": 16,
+            "puzzleImage": "https://static6.depositphotos.com/1005091/593/v/600/depositphotos_5932963-stock-illustration-cartoon-forest-landscape-1.jpg"
         }
     ]    
 }

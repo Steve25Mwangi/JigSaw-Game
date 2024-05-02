@@ -57,6 +57,7 @@ gameScene.setUpPuzzle = function () {
     bwImage.setAlpha(this.alphaValue);
     bwImage.setVisible(true);
     bwImage.setTint(0x696764);
+    console.log(sourceImage.width);
 
     //-----blank canvas------
     let contentHolder = this.add.graphics();
@@ -130,6 +131,9 @@ gameScene.setUpPuzzle = function () {
     //add on drag start params
     for (let i = 0; i < this.pieces.length; i++) {
         this.pieces[i].on('dragstart', function (pointer, gameObject, dragX, dragY) {
+            if (!this.pieces[i].isMovable) {
+                return;
+            }
             this.startXPos = this.pieces[i].x;
             this.startYPos = this.pieces[i].y;
             this.pieces[i].setDepth(2);
@@ -140,6 +144,9 @@ gameScene.setUpPuzzle = function () {
     //add on drag release handler
     for (let i = 0; i < this.pieces.length; i++) {
         this.pieces[i].on('dragend', function (pointer, gameObject, event) {
+            if (!this.pieces[i].isMovable) {
+                return;
+            }
             this.pieces[i].setDepth(0);
             this.checkPiece(this.pieces[i], i);
         }, this);
