@@ -1,0 +1,59 @@
+{
+    "puzzleSettings":
+    [
+        {
+            "puzzleName": "SeaMonster",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 5,
+            "gridSizeY": 5,
+            "puzzlePieceFitterSize": 15,
+            "puzzleImage": "https://play-lh.googleusercontent.com/ELVNNsMJmbma8BMtGY3mcpsOE1wLUX_1YM1K24TXMK9o69dtbnXYrROY3S_o8G7jdQ=w526-h296-rw"            
+        },
+        {
+            "puzzleName": "Slayer",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 8,
+            "gridSizeY": 6,
+            "puzzlePieceFitterSize": 10,
+            "puzzleImage": "https://st2.depositphotos.com/7413918/10242/i/450/depositphotos_102423072-stock-illustration-group-of-wild-animal.jpg"
+        },
+        {
+            "puzzleName": "SeaMonster",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 3,
+            "gridSizeY": 3,
+            "puzzlePieceFitterSize": 25,
+            "puzzleImage": "https://play-lh.googleusercontent.com/ELVNNsMJmbma8BMtGY3mcpsOE1wLUX_1YM1K24TXMK9o69dtbnXYrROY3S_o8G7jdQ=w526-h296-rw"            
+        },
+        {
+            "puzzleName": "Slayer",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 8,
+            "gridSizeY": 6,
+            "puzzlePieceFitterSize": 12,
+            "puzzleImage": "https://play-lh.googleusercontent.com/Icj6FDBp9Wto-yRDoBH_8W_AMAlxjlV5NhH_4PTMHuCg-99GP9qb0mcCJQlV7RK33A=w526-h296-rw"
+        },
+        {
+            "puzzleName": "SeaMonster",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 3,
+            "gridSizeY": 3,
+            "puzzlePieceFitterSize": 25,
+            "puzzleImage": "https://play-lh.googleusercontent.com/ELVNNsMJmbma8BMtGY3mcpsOE1wLUX_1YM1K24TXMK9o69dtbnXYrROY3S_o8G7jdQ=w526-h296-rw"
+        },
+        {
+            "puzzleName": "Slayer",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 8,
+            "gridSizeY": 6,
+            "puzzlePieceFitterSize": 25,
+            "puzzleImage": "https://play-lh.googleusercontent.com/Icj6FDBp9Wto-yRDoBH_8W_AMAlxjlV5NhH_4PTMHuCg-99GP9qb0mcCJQlV7RK33A=w526-h296-rw"
+        }
+    ]    
+}
