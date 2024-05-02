@@ -243,7 +243,7 @@ this.disableAndEnableFX = async function (piece, delay) {
 };
 
 this.mobileFX = async function (piece, delay) {
-    let color = 0xffcc00;
+    let color = 0xffcc00;    
     await new Promise(resolve => setTimeout(resolve, delay));
     piece.setTint(color);
     await new Promise(resolve => setTimeout(resolve, delay));
