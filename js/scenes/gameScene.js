@@ -89,8 +89,8 @@ gameScene.setUpPuzzle = function () {
 
     for (var i = 0, cnt = this.pieces.length; i < cnt; i++) {
         let piece = this.pieces[i];
-        //piece.preFX.setPadding(2);
-        //piece.preFX.addGlow(0xffffff, 1, 0);
+        piece.postFX.setPadding(2);
+        piece.postFX.addGlow(0xffffff, 1, 0);
         piece.setInteractive();        
         this.input.setDraggable(piece);
 
@@ -177,7 +177,7 @@ gameScene.checkPiece = function (piece, index) {
         piece.y = originalPosition.y;
         piece.isMovable = false;
 
-        piece.preFX.addGlow(0xffffff, 1, 0);
+        piece.postFX.addGlow(0xffffff, 1, 0);
 
         disableAndEnableFX(piece, 250);
 
@@ -192,7 +192,7 @@ gameScene.checkPiece = function (piece, index) {
             
             setTimeout(function () {
                 for (let i = 0; i < this.pieces.length; i++) {
-                    this.pieces[i].preFX.enable();
+                    this.pieces[i].postFX.enable();
                     disableAndEnableFX(this.pieces[i], 250);
                 }
             }.bind(this), 1000);
@@ -219,9 +219,9 @@ this.endGame = function () {
 
 this.disableAndEnableFX = async function (piece, delay) {
     await new Promise(resolve => setTimeout(resolve, delay));
-    piece.preFX.disable();
+    piece.postFX.disable();
     await new Promise(resolve => setTimeout(resolve, delay));
-    piece.preFX.enable();
+    piece.postFX.enable();
     await new Promise(resolve => setTimeout(resolve, delay));
-    piece.preFX.disable();
+    piece.postFX.disable();
 };
