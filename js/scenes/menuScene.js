@@ -19,13 +19,13 @@ menuScene.preload = function () {
 
 menuScene.create = function () {
     // Define the number of rows and columns
-    let rowNo = 5;
+    let rowNo = 3;
     let colNo = 3;
     
-    let puzzleWidth = 15;
-    let puzzleHeight = 15;
+    let puzzleWidth = 100;
+    let puzzleHeight = 2;
 
-    let offset = 50;
+    let offset = 10;
     
     // Calculate the spacing between images
     let xSpace = (this.game.config.width - (colNo * puzzleWidth)) / (colNo + 1);

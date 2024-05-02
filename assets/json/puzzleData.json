@@ -2,13 +2,13 @@
     "puzzleSettings":
     [
         {
-            "puzzleName": "SeaMonster",
+            "puzzleName": "Env",
             "puzzleScale": 1,
             "puzzlePieceRange": 50,
             "gridSizeX": 5,
             "gridSizeY": 5,
             "puzzlePieceFitterSize": 15,
-            "puzzleImage": "https://play-lh.googleusercontent.com/ELVNNsMJmbma8BMtGY3mcpsOE1wLUX_1YM1K24TXMK9o69dtbnXYrROY3S_o8G7jdQ=w526-h296-rw"            
+            "puzzleImage": "https://st.depositphotos.com/1719108/4188/i/450/depositphotos_41884115-stock-illustration-the-kids-playing-at-the.jpg"            
         },
         {
             "puzzleName": "Slayer",
@@ -26,7 +26,34 @@
             "gridSizeX": 3,
             "gridSizeY": 3,
             "puzzlePieceFitterSize": 25,
-            "puzzleImage": "https://play-lh.googleusercontent.com/ELVNNsMJmbma8BMtGY3mcpsOE1wLUX_1YM1K24TXMK9o69dtbnXYrROY3S_o8G7jdQ=w526-h296-rw"            
+            "puzzleImage": "https://static4.depositphotos.com/1005091/369/i/600/depositphotos_3690514-stock-illustration-country-landscape-with-sun.jpg"            
+        },
+        {
+            "puzzleName": "Slayer",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 8,
+            "gridSizeY": 6,
+            "puzzlePieceFitterSize": 12,
+            "puzzleImage": "https://play-lh.googleusercontent.com/Icj6FDBp9Wto-yRDoBH_8W_AMAlxjlV5NhH_4PTMHuCg-99GP9qb0mcCJQlV7RK33A=w526-h296-rw"
+        },
+        {
+            "puzzleName": "SeaMonster",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 3,
+            "gridSizeY": 3,
+            "puzzlePieceFitterSize": 25,
+            "puzzleImage": "https://play-lh.googleusercontent.com/ELVNNsMJmbma8BMtGY3mcpsOE1wLUX_1YM1K24TXMK9o69dtbnXYrROY3S_o8G7jdQ=w526-h296-rw"
+        },
+        {
+            "puzzleName": "Slayer",
+            "puzzleScale": 1,
+            "puzzlePieceRange": 50,
+            "gridSizeX": 8,
+            "gridSizeY": 6,
+            "puzzlePieceFitterSize": 25,
+            "puzzleImage": "https://play-lh.googleusercontent.com/Icj6FDBp9Wto-yRDoBH_8W_AMAlxjlV5NhH_4PTMHuCg-99GP9qb0mcCJQlV7RK33A=w526-h296-rw"
         },
         {
             "puzzleName": "Slayer",
