@@ -17,11 +17,11 @@ gameScene.init = function (data) {
     this.alphaValue = 0.15;
     this.columnsNo = this.puzzleData.puzzleSettings[this.puzzleIndex].gridSizeX;
     this.rowsNo = this.puzzleData.puzzleSettings[this.puzzleIndex].gridSizeY;
-    this.pieceFitterSize = this.puzzleData.puzzleSettings[this.puzzleIndex].puzzlePieceFitterSize;    
+    this.pieceFitterSize = this.puzzleData.puzzleSettings[this.puzzleIndex].puzzlePieceFitterSize;
 
     this.pieceScale = 0.5;
 
-    this.platform = this.sys.game.device.os.desktop?'pc':'mobile';
+    this.platform = this.sys.game.device.os.desktop ? 'pc' : 'mobile';
     console.log(this.platform);
 
 }
@@ -97,15 +97,15 @@ gameScene.setUpPuzzle = function () {
             piece.preFX.setPadding(2);
             piece.preFX.addGlow(0xffffff, 1, 0);
         }
-        piece.setInteractive();        
+        piece.setInteractive();
         this.input.setDraggable(piece);
 
         //piece.x += this.puzzlePieceOffset;
         //piece.y += this.puzzlePieceOffset;
 
         // Store the original position of the piece
-        this.originalPositions.push({ index: i, x: piece.x, y: piece.y });        
-                
+        this.originalPositions.push({ index: i, x: piece.x, y: piece.y });
+
         //shuffle pieces
         this.originalScale = piece.scale;
         let jumbledFactor = 50;
@@ -125,7 +125,7 @@ gameScene.setUpPuzzle = function () {
         xPos += pieceWidth;
 
         this.unsortedPieces.add(piece);
-        piece.isMovable = true;        
+        piece.isMovable = true;
     };
 
     // shuffle the positions of each piece horizontally to randomize without repeating
@@ -184,9 +184,12 @@ gameScene.checkPiece = function (piece, index) {
         if (this.platform == 'pc') {
             piece.preFX.addGlow(0xffffff, 1, 0);
 
-        disableAndEnableFX(piece, 250);
+            disableAndEnableFX(piece, 250);
         }
-        
+        else {
+            mobileFX(piece, 250);
+        }
+
         this.sound.play(this.dropSound);
 
 
@@ -195,16 +198,20 @@ gameScene.checkPiece = function (piece, index) {
         //console.log(this.unsortedPieces.getChildren().length);
 
         if (this.unsortedPieces.getChildren().length == 0) {
-           
-            if (this.platform == 'pc') {
-                setTimeout(function () {
-                    for (let i = 0; i < this.pieces.length; i++) {
+
+            setTimeout(function () {
+                for (let i = 0; i < this.pieces.length; i++) {
+                    if (this.platform == 'pc') {
                         this.pieces[i].preFX.enable();
                         disableAndEnableFX(this.pieces[i], 250);
                     }
-                }.bind(this), 1000); 
-            }
-            
+                    else {
+                        mobileFX(this.pieces[i], 250);
+                    }
+
+                }
+            }.bind(this), 1000);
+
 
             setTimeout(function () {
                 this.scene.start('Menu');
@@ -223,7 +230,7 @@ gameScene.checkPiece = function (piece, index) {
 
 this.endGame = function () {
 
-    
+
 };
 
 this.disableAndEnableFX = async function (piece, delay) {
@@ -234,3 +241,15 @@ this.disableAndEnableFX = async function (piece, delay) {
     await new Promise(resolve => setTimeout(resolve, delay));
     piece.preFX.disable();
 };
+
+this.mobileFX = async function (piece, delay) {
+    let color = 0xffcc00;
+    await new Promise(resolve => setTimeout(resolve, delay));
+    piece.setTint(color);
+    await new Promise(resolve => setTimeout(resolve, delay));
+    piece.clearTint();
+    await new Promise(resolve => setTimeout(resolve, delay));
+    piece.setTint(color);
+    await new Promise(resolve => setTimeout(resolve, delay));
+    piece.clearTint();
+}
