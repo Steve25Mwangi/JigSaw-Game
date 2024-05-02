@@ -89,8 +89,8 @@ gameScene.setUpPuzzle = function () {
 
     for (var i = 0, cnt = this.pieces.length; i < cnt; i++) {
         let piece = this.pieces[i];
-        piece.preFX.setPadding(2);
-        piece.preFX.addGlow(0xffffff, 1, 0.4);
+        //piece.preFX.setPadding(2);
+        //piece.preFX.addGlow(0xffffff, 1, 0);
         piece.setInteractive();        
         this.input.setDraggable(piece);
 
