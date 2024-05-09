@@ -17,7 +17,8 @@ menuScene.preload = function () {
     }
 }
 
-menuScene.create = function () {
+menuScene.create = function () {    
+    //this.cameras.main.fadeIn(1000);
     // Define the number of rows and columns
     let rowNo = 3;
     let colNo = 3;

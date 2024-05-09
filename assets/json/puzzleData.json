@@ -1,86 +1,133 @@
 {
-    "puzzleSettings":
-    [
+    "categories": [
         {
-            "puzzleName": "Env",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 5,
-            "gridSizeY": 5,
-            "puzzlePieceFitterSize": 15,
-            "puzzleImage": "https://st.depositphotos.com/1719108/4188/i/450/depositphotos_41884115-stock-illustration-the-kids-playing-at-the.jpg"            
+            "category": "animal",
+            "images": [
+                {
+                    "puzzleImage": "assets/images/animal/animal0.png"
+                },
+                {
+                    "puzzleImage": "assets/images/animal/animal1.png"
+                },
+                {
+                    "puzzleImage": "assets/images/animal/animal2.png"
+                },
+                {
+                    "puzzleImage": "assets/images/animal/animal3.png"
+                },
+                {
+                    "puzzleImage": "assets/images/animal/animal4.png"
+                },
+                {
+                    "puzzleImage": "assets/images/animal/animal5.png"
+                },
+                {
+                    "puzzleImage": "assets/images/animal/animal6.png"
+                }
+            ]
         },
         {
-            "puzzleName": "Slayer",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 8,
-            "gridSizeY": 6,
-            "puzzlePieceFitterSize": 10,
-            "puzzleImage": "https://st2.depositphotos.com/7413918/10242/i/450/depositphotos_102423072-stock-illustration-group-of-wild-animal.jpg"
+            "category": "cars",
+            "images": [
+                {
+                    "puzzleImage": "assets/images/cars/cars0.png"
+                },
+                {
+                    "puzzleImage": "assets/images/cars/cars1.png"
+                },
+                {
+                    "puzzleImage": "assets/images/cars/cars2.png"
+                },
+                {
+                    "puzzleImage": "assets/images/cars/cars3.png"
+                }
+            ]
         },
         {
-            "puzzleName": "SeaMonster",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 3,
-            "gridSizeY": 3,
-            "puzzlePieceFitterSize": 25,
-            "puzzleImage": "https://static4.depositphotos.com/1005091/369/i/600/depositphotos_3690514-stock-illustration-country-landscape-with-sun.jpg"            
+            "category": "nature",
+            "images": [
+                {
+                    "puzzleImage": "assets/images/nature/nature0.png"
+                },
+                {
+                    "puzzleImage": "assets/images/nature/nature1.png"
+                },
+                {
+                    "puzzleImage": "assets/images/nature/nature2.png"
+                },
+                {
+                    "puzzleImage": "assets/images/nature/nature3.png"
+                },
+                {
+                    "puzzleImage": "assets/images/nature/nature4.png"
+                }
+            ]
         },
         {
-            "puzzleName": "Slayer",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 8,
-            "gridSizeY": 6,
-            "puzzlePieceFitterSize": 12,
-            "puzzleImage": "https://static5.depositphotos.com/1005091/394/i/600/depositphotos_3947102-stock-illustration-leafy-tree-in-autumn-landscape.jpg"
+            "category": "places",
+            "images": [
+                {
+                    "puzzleImage": "assets/images/places/places0.png"
+                },
+                {
+                    "puzzleImage": "assets/images/places/places1.png"
+                },
+                {
+                    "puzzleImage": "assets/images/places/places2.png"
+                },
+                {
+                    "puzzleImage": "assets/images/places/places3.png"
+                },
+                {
+                    "puzzleImage": "assets/images/places/places4.png"
+                },
+                {
+                    "puzzleImage": "assets/images/places/places5.png"
+                },
+                {
+                    "puzzleImage": "assets/images/places/places6.png"
+                }
+            ]
         },
         {
-            "puzzleName": "SeaMonster",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 3,
-            "gridSizeY": 3,
-            "puzzlePieceFitterSize": 25,
-            "puzzleImage": "https://st.depositphotos.com/1005091/4736/v/600/depositphotos_47366795-stock-illustration-tree-theme-image-8.jpg"
+            "category": "technology",
+            "images": [
+                {
+                    "puzzleImage": "assets/images/technology/technology0.png"
+                },
+                {
+                    "puzzleImage": "assets/images/technology/technology1.png"
+                },
+                {
+                    "puzzleImage": "assets/images/technology/technology2.png"
+                },
+                {
+                    "puzzleImage": "assets/images/technology/technology3.png"
+                },
+                {
+                    "puzzleImage": "assets/images/technology/technology4.png"
+                }
+            ]
         },
         {
-            "puzzleName": "Slayer",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 8,
-            "gridSizeY": 6,
-            "puzzlePieceFitterSize": 14,
-            "puzzleImage": "https://st2.depositphotos.com/1763191/47189/v/600/depositphotos_471899648-stock-illustration-blank-landscape-scene-nature-park.jpg"
-        },
-        {
-            "puzzleName": "Slayer",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 8,
-            "gridSizeY": 6,
-            "puzzlePieceFitterSize": 12,
-            "puzzleImage": "https://st2.depositphotos.com/1526816/47764/v/600/depositphotos_477647726-stock-illustration-blank-nature-park-landscape-scene.jpg"
-        },
-        {
-            "puzzleName": "SeaMonster",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 4,
-            "gridSizeY": 4,
-            "puzzlePieceFitterSize": 25,
-            "puzzleImage": "https://static4.depositphotos.com/1005091/369/v/600/depositphotos_3690219-stock-illustration-country-landscape-with-barn.jpg"
-        },
-        {
-            "puzzleName": "Slayer",
-            "puzzleScale": 1,
-            "puzzlePieceRange": 50,
-            "gridSizeX": 6,
-            "gridSizeY": 6,
-            "puzzlePieceFitterSize": 16,
-            "puzzleImage": "https://static6.depositphotos.com/1005091/593/v/600/depositphotos_5932963-stock-illustration-cartoon-forest-landscape-1.jpg"
+            "category": "underwater",
+            "images": [
+                {
+                    "puzzleImage": "assets/images/underwater/underwater0.png"
+                },
+                {
+                    "puzzleImage": "assets/images/underwater/underwater1.png"
+                },
+                {
+                    "puzzleImage": "assets/images/underwater/underwater2.png"
+                },
+                {
+                    "puzzleImage": "assets/images/underwater/underwater3.png"
+                },
+                {
+                    "puzzleImage": "assets/images/underwater/underwater4.png"
+                }
+            ]
         }
-    ]    
+    ]
 }

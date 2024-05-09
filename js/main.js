@@ -8,9 +8,11 @@ let config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
-  scene: [loadingScene, menuScene, gameScene,],
+  scene: [logoScene, loadingScene, categoryScene, puzzleMenu, puzzleSetup, puzzleGame,menuScene, gameScene,],
   title: 'Jigsaw Puzzle',
 };
+
+
 
 // create the game, and pass it the configuration
 let game = new Phaser.Game(config);

@@ -1,8 +1,11 @@
-//import {CustomPipeline} from './scenes/customPipeline.js';
 // create a new scene
 let gameScene = new Phaser.Scene('MainGame');
 
 gameScene.init = function (data) {
+
+    console.log(data);
+
+    return;
 
     this.puzzleIndex = data[0].puzzleIndex;
     this.puzzleData = data[0].puzzleData;
@@ -18,8 +21,8 @@ gameScene.init = function (data) {
     this.columnsNo = this.puzzleData.puzzleSettings[this.puzzleIndex].gridSizeX;
     this.rowsNo = this.puzzleData.puzzleSettings[this.puzzleIndex].gridSizeY;
     this.pieceFitterSize = this.puzzleData.puzzleSettings[this.puzzleIndex].puzzlePieceFitterSize;
-
-    this.pieceScale = 0.5;
+    this.puzzlePieceOffset = this.puzzleData.puzzleSettings[this.puzzleIndex].puzzlePieceOffset;
+    this.pieceScale = 0.45;
 
     this.platform = this.sys.game.device.os.desktop ? 'pc' : 'mobile';
     console.log(this.platform);
@@ -96,12 +99,13 @@ gameScene.setUpPuzzle = function () {
         if (this.platform == 'pc') {
             piece.preFX.setPadding(2);
             piece.preFX.addGlow(0xffffff, 1, 0);
+            piece.preFX.addShadow(0x000000, 4, 4, 3, 3);
         }
         piece.setInteractive();
         this.input.setDraggable(piece);
 
-        //piece.x += this.puzzlePieceOffset;
-        //piece.y += this.puzzlePieceOffset;
+        piece.x += this.puzzlePieceOffset;
+        piece.y += this.puzzlePieceOffset;
 
         // Store the original position of the piece
         this.originalPositions.push({ index: i, x: piece.x, y: piece.y });
@@ -126,6 +130,9 @@ gameScene.setUpPuzzle = function () {
 
         this.unsortedPieces.add(piece);
         piece.isMovable = true;
+
+        //debugging
+        //piece.setAlpha(this.alphaValue);
     };
 
     // shuffle the positions of each piece horizontally to randomize without repeating
@@ -228,12 +235,12 @@ gameScene.checkPiece = function (piece, index) {
     }
 };
 
-this.endGame = function () {
-
+gameScene.endGame = function () {
+console.log('Ended!')
 
 };
 
-this.disableAndEnableFX = async function (piece, delay) {
+gameScene.disableAndEnableFX = async function (piece, delay) {
     await new Promise(resolve => setTimeout(resolve, delay));
     piece.preFX.disable();
     await new Promise(resolve => setTimeout(resolve, delay));
@@ -242,7 +249,7 @@ this.disableAndEnableFX = async function (piece, delay) {
     piece.preFX.disable();
 };
 
-this.mobileFX = async function (piece, delay) {
+gameScene.mobileFX = async function (piece, delay) {
     let color = 0xffcc00;    
     await new Promise(resolve => setTimeout(resolve, delay));
     piece.setTint(color);
