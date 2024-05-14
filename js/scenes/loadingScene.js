@@ -39,6 +39,9 @@ loadingScene.preload = function () {
 
     this.puzzleDataJson = this.load.json('puzzleData', 'assets/json/puzzleData.json');    
 
+    this.load.audio('drop', 'assets/audio/DropPiece.wav');
+    this.load.audio('pick', 'assets/audio/PickPiece.wav');
+    this.load.audio('wrong', 'assets/audio/WrongSfx.wav');
     //load sound
     //this.sound_drop = this.load.audio('drop', 'assets/audio/DropPiece.wav');
    // this.sound_pick = this.load.audio('pick', 'assets/audio/PickPiece.wav');

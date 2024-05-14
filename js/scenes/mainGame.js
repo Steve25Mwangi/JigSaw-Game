@@ -27,9 +27,6 @@ puzzleGame.init = function (data) {
 puzzleGame.preload = function () {
 
     //this.load.image('mainImage', this.image);
-    this.load.audio('drop', 'assets/audio/DropPiece.wav');
-    this.load.audio('pick', 'assets/audio/PickPiece.wav');
-    this.load.audio('wrong', 'assets/audio/WrongSfx.wav');
 }
 
 puzzleGame.create = function () {
@@ -42,14 +39,23 @@ puzzleGame.create = function () {
         if (!gameObject.isMovable) {
             return;
         }
-        gameObject.x = dragX;
-        gameObject.y = dragY;
+        
+        // Define a delay factor (between 0 and 1) to control the dragging speed
+        var delayFactor = 1; // Adjust this value to your preference
+        
+        // Calculate the new position with a slight delay
+        var newX = gameObject.x + (dragX - gameObject.x) * delayFactor;
+        var newY = gameObject.y + (dragY - gameObject.y) * delayFactor;
+        
+        // Update the gameObject position
+        gameObject.x = newX;
+        gameObject.y = newY;
     });
 
     //setup puzzle
     this.setUpPuzzle();
 
-    ///this.setTimer();
+    //this.setTimer();
 
     ///////endgame graphic////////
 
@@ -63,7 +69,7 @@ puzzleGame.create = function () {
     this.endGameGraphic.setAlpha(0.5);
 
     this.buttonBack = this.add.sprite(this.gameW / 2, this.gameH / 2 + 200, 'button').setInteractive();
-    this.buttonBack.on('pointerdown', function () {        
+    this.buttonBack.on('pointerdown', function () {
         this.scene.start('Category', this.category);
     }, this);
     this.buttonBack.setDepth(2);
@@ -83,7 +89,6 @@ puzzleGame.create = function () {
     this.endGameGroup.add(this.backButtonText);
     this.endGameGroup.add(this.endGameText);
 
-    //set every element in endGameGroup invisible
     this.endGameGroup.setVisible(false);
 }
 
@@ -118,7 +123,7 @@ puzzleGame.setUpPuzzle = function () {
     let bwImage = this.add.sprite(this.gameW / 2, this.gameH / 2, this.image).setVisible(true).setOrigin(0.5);
     bwImage.setScale(this.scale);
     bwImage.setAlpha(this.alphaValue);
-    bwImage.setVisible(true);
+    bwImage.setVisible(false);
     bwImage.setTint(0x696764);
 
 
@@ -132,17 +137,18 @@ puzzleGame.setUpPuzzle = function () {
     contentHolder.setVisible(false);
 
     const difficultyMap = {
-        'easy': { columns: 3, rows: 3, pieceSize: 50, timeLimit: 120 },
-        'medium': { columns: 4, rows: 4, pieceSize: 20, timeLimit: 90 },
-        'hard': { columns: 5, rows: 5, pieceSize: 20, timeLimit: 60 }
+        'easy': { columns: 3, rows: 3, pieceSize: 50, timeLimit: 120, pieceOffset: 20},
+        'medium': { columns: 4, rows: 4, pieceSize: 20, timeLimit: 90, pieceOffset: 10 },
+        'hard': { columns: 5, rows: 5, pieceSize: 20, timeLimit: 60, pieceOffset: 10 }
     };
 
     if (difficultyMap[this.difficulty]) {
-        const { columns, rows, pieceSize, timeLimit } = difficultyMap[this.difficulty];
+        const { columns, rows, pieceSize, timeLimit, pieceOffset } = difficultyMap[this.difficulty];
         this.columnsNo = columns;
         this.rowsNo = rows;
         this.pieceFitterSize = pieceSize;
         this.timeLimit = timeLimit;
+        this.puzzlePieceOffset = pieceOffset;
     }
 
     this.pieces = this.plugins.get('rexcutjigsawimageplugin').gridCut(sourceImage, {
@@ -166,11 +172,11 @@ puzzleGame.setUpPuzzle = function () {
 
     for (var i = 0, cnt = this.pieces.length; i < cnt; i++) {
         let piece = this.pieces[i];
-        if (this.platform == 'pc') {
+        //if (this.platform == 'pc') {
             piece.preFX.setPadding(2);
             piece.preFX.addGlow(0xffffff, 1, 0);
-            piece.preFX.addShadow(0x000000, 4, 4, 3, 3);
-        }
+            piece.preFX.addShadow(0, 0, 0.006, 2, 0x333333, 10);
+        //}
         piece.setInteractive();
         this.input.setDraggable(piece);
 
@@ -217,10 +223,22 @@ puzzleGame.setUpPuzzle = function () {
             if (!this.pieces[i].isMovable) {
                 return;
             }
+            
+            //play scale tween on piece
+            //add a tween scale animation to piece
+            this.scaleTween = this.tweens.add({
+                targets: this.pieces[i],
+                scale: this.originalScale,
+                duration: 225,
+                ease: 'Bounce.Out',
+                callbackScope: this
+            });
+
+            console.log('Tweening!!' + this.pieces[i]);
             this.startXPos = this.pieces[i].x;
             this.startYPos = this.pieces[i].y;
             this.pieces[i].setDepth(2);
-            this.pieces[i].setScale(this.originalScale)
+            //this.pieces[i].setScale(this.originalScale)
             this.sound.play(this.pickSound);
         }, this);
     }
@@ -301,7 +319,7 @@ puzzleGame.endGame = function () {
 
 
     setTimeout(function () {
-        this.endGameText.setText('Game Over!');
+        this.endGameText.setText('Well Done!');
         this.endGameGroup.setVisible(true);
         //this.scene.start('PuzzleMenu', this.category);
     }.bind(this), 2500);
