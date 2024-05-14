@@ -134,7 +134,7 @@ puzzleGame.setUpPuzzle = function () {
     let centerX = sourceImage.x - (sourceImage.width * this.scale) / 2;
     let centerY = sourceImage.y - (sourceImage.height * this.scale) / 2;
     contentHolder.setPosition(centerX, centerY);
-    contentHolder.setVisible(false);
+    contentHolder.setVisible(true);
 
     const difficultyMap = {
         'easy': { columns: 3, rows: 3, pieceSize: 50, timeLimit: 120, pieceOffset: 20},
