@@ -172,11 +172,12 @@ puzzleGame.setUpPuzzle = function () {
 
     for (var i = 0, cnt = this.pieces.length; i < cnt; i++) {
         let piece = this.pieces[i];
-        //if (this.platform == 'pc') {
+        if (this.platform == 'pc') {
             piece.preFX.setPadding(2);
             piece.preFX.addGlow(0xffffff, 1, 0);
-            piece.preFX.addShadow(0, 0, 0.006, 2, 0x333333, 10);
-        //}
+            
+        }
+        piece.preFX.addShadow(0, 0, 0.006, 2, 0x333333, 10);
         piece.setInteractive();
         this.input.setDraggable(piece);
 
