@@ -129,7 +129,7 @@ puzzleGame.setUpPuzzle = function () {
 
     //-----blank canvas------
     let contentHolder = this.add.graphics();
-    contentHolder.fillStyle(0x000033, 1);
+    contentHolder.fillStyle(0x6e7878, 1);
     contentHolder.fillRect(0, 0, sourceImage.width * (this.scale), sourceImage.height * (this.scale));
     let centerX = sourceImage.x - (sourceImage.width * this.scale) / 2;
     let centerY = sourceImage.y - (sourceImage.height * this.scale) / 2;
@@ -175,9 +175,9 @@ puzzleGame.setUpPuzzle = function () {
         if (this.platform == 'pc') {
             piece.preFX.setPadding(2);
             piece.preFX.addGlow(0xffffff, 1, 0);
-            
+            piece.preFX.addShadow(0, 0, 0.006, 2, 0x333333, 10);    
         }
-        piece.preFX.addShadow(0, 0, 0.006, 2, 0x333333, 10);
+        
         piece.setInteractive();
         this.input.setDraggable(piece);
 
