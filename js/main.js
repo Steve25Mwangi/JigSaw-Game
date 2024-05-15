@@ -8,7 +8,9 @@ let config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
-  scene: [logoScene, loadingScene, categoryScene, puzzleMenu, puzzleSetup, puzzleGame,menuScene, gameScene,],
+  forceOrientation: true,
+  orientation: 'landscape',
+  scene: [logoScene, loadingScene, categoryScene, puzzleMenu, puzzleSetup, puzzleGame, menuScene, gameScene,],
   title: 'Jigsaw Puzzle',
 };
 

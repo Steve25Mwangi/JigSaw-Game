@@ -39,9 +39,8 @@ puzzleGame.create = function () {
         if (!gameObject.isMovable) {
             return;
         }
-        
-        // Define a delay factor (between 0 and 1) to control the dragging speed
-        var delayFactor = 1; // Adjust this value to your preference
+               
+        var delayFactor = 1; 
         
         // Calculate the new position with a slight delay
         var newX = gameObject.x + (dragX - gameObject.x) * delayFactor;
