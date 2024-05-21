@@ -24,11 +24,6 @@ puzzleGame.init = function (data) {
     };
 };
 
-puzzleGame.preload = function () {
-
-    //this.load.image('mainImage', this.image);
-}
-
 puzzleGame.create = function () {
 
     this.dropSound = 'drop';

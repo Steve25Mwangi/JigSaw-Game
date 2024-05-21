@@ -8,14 +8,10 @@ puzzleSetup.init = function (data) {
     this.gameW = this.sys.game.config.width;
     this.gameH = this.sys.game.config.height;
 }
-puzzleSetup.preload = function () {
-
-    //this.load.plugin('rexcutjigsawimageplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexcutjigsawimageplugin.min.js', true);
-   // this.load.image('mainImage', this.image);    
-    //  this.load.image('BG', 'https://t3.ftcdn.net/jpg/02/09/96/68/360_F_209966863_9WvdTvQAMpqQuFSil6hokJecoY4V1j60.jpg');    
-}
 
 puzzleSetup.create = function () {
+
+    this.cameras.main.fadeIn(500);
     let sourceImage = this.add.image(this.gameW / 2, this.gameH / 2 - 60, this.image).setVisible(false).setOrigin(0.5);
     sourceImage.setScale(0.5);
 

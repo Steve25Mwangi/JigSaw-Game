@@ -88,8 +88,16 @@ puzzleMenu.createMenu = function () {
         puzzleImage.setOrigin(0.5);        
 
         puzzleImage.setInteractive();
-        puzzleImage.on('pointerdown', function () {            
-            this.scene.start('PuzzleSetup', [{ 'puzzleImage': 'thumb_' + this.category + i, 'category': this.category }]);
+        puzzleImage.on('pointerdown', function () {   
+            console.log('fadeout?')
+            this.cameras.main.fadeOut(500);            
+            this.timerEvent = this.time.addEvent({
+                delay: 500,
+                callback: function () {    
+                    this.scene.start('PuzzleSetup', [{ 'puzzleImage': 'thumb_' + this.category + i, 'category': this.category }]);
+                },
+                callbackScope: this                
+            });            
         }, this);        
     }
 
