@@ -34,6 +34,12 @@ loadingScene.preload = function () {
     }, this);
 
     this.load.plugin('rexcutjigsawimageplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexcutjigsawimageplugin.min.js', true);
+    //this.load.plugin('rexuiplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexuiplugin.min.js', true);
+    // this.load.plugin({
+    //     key: 'rexuiplugin',
+    //     url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexuiplugin.min.js',
+    //     sceneKey: 'rexUI'
+    // }); 
     this.load.image('button', 'assets/images/button.png');
     //assets
 

@@ -49,7 +49,7 @@ puzzleGame.create = function () {
     //setup puzzle
     this.setUpPuzzle();
 
-    //this.setTimer();
+    this.setTimer();
 
     ///////endgame graphic////////
 

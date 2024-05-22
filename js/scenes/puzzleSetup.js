@@ -23,11 +23,15 @@ puzzleSetup.create = function () {
 
     //////////////////
     for (var i = 0, cnt = this.pieces.length; i < cnt; i++) {
-        let piece = this.pieces[i];
-
+        let piece = this.pieces[i];              
+        // piece.preFX.setBlur(4);
         piece.preFX.setPadding(2);
         piece.preFX.addGlow(0xffffff, 1, 0);
-        piece.preFX.addShadow(0x000000, 4, 4, 3, 3);        
+        piece.preFX.addShadow(0x000000, 4, 4, 3, 3);   
+        
+
+        
+       // piece.setStrokeStyle(1, 0x000000);
 
     };
     let textConfig = {

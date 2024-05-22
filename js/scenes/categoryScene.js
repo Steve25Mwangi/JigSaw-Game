@@ -38,9 +38,22 @@ categoryScene.create = function () {
     buttonConfig.forEach(button => {
         let buttonSprite = this.add.sprite(button.posX, button.posY, button.image).setOrigin(0).setScale(1);
         buttonSprite.setInteractive().on('pointerdown', () => {                    
-            this.scene.start('PuzzleMenu', button.category);
+            console.log('fadeout?')
+            this.cameras.main.fadeOut(500);
+            this.timerEvent = this.time.addEvent({
+                delay: 500,
+                callback: function () {
+                    this.scene.start('PuzzleMenu', button.category);
+                },
+                callbackScope: this
+            });
+            
         });
         this.add.text(buttonSprite.x + 125, buttonSprite.y + 55, button.name, textConfig).setOrigin(0.5);
     });
+}
+
+categoryScene.createScrollObject= function () {
+    this.cameras.main.fadeIn(1000);
 }
 
