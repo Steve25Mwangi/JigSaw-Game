@@ -229,7 +229,7 @@ puzzleGame.setUpPuzzle = function () {
                 callbackScope: this
             });
 
-            console.log('Tweening!!' + this.pieces[i]);
+            //console.log('Tweening!!' + this.pieces[i]);
             this.startXPos = this.pieces[i].x;
             this.startYPos = this.pieces[i].y;
             this.pieces[i].setDepth(2);

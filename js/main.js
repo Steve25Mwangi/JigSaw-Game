@@ -1,3 +1,4 @@
+//import UIPlugin from 'phaser3-rex-plugins/templates/ui/ui-plugin.js';
 // our game's configuration
 let config = {
   type: Phaser.AUTO,
@@ -10,7 +11,7 @@ let config = {
   },
   forceOrientation: true,
   orientation: 'landscape',
-  scene: [logoScene, loadingScene, categoryScene, puzzleMenu, puzzleSetup, puzzleGame, menuScene, gameScene,],
+  scene: [logoScene, loadingScene, homeScene, firstPuzzleSelector, specificPuzzleSelector, categoryScene, puzzleMenu, puzzleSetup, puzzleGame, menuScene, gameScene,],
   title: 'Jigsaw Puzzle',
 };
 

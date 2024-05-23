@@ -4,7 +4,7 @@ logoScene.preload = function () {
     
     this.load.image('logo', 'assets/images/UGLogo.png');
     this.load.image('gameLogo', 'assets/images/PuzzleLogoPH.jpg');
-    //this.load.glsl('BnWShader', 'assets/shaders/BnWShader.frag');    
+    this.puzzleDataJson = this.load.json('puzzleData', 'assets/json/puzzleData.json');            
 }
 
 logoScene.create = function () {

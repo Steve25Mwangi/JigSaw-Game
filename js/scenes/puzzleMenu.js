@@ -111,7 +111,7 @@ puzzleMenu.createMenu = function () {
 }
 
 puzzleMenu.createScrollObject = function (data) {
-    //using rexui plugin create scrollable panel containing all my puzzle images
+    
     let imageScale = 0.6;
     var panel = this.rexUI.add.scrollablePanel({
         x: this.game.config.width / 2, y: 300,
@@ -144,7 +144,7 @@ puzzleMenu.createScrollObject = function (data) {
                             },
                             callbackScope: this
                         });
-                    }, this),                                    
+                    }, this),                                
             )
         panel.layout()
     }
